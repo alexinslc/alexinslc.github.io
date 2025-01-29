@@ -4,82 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Lutz</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        // Toggle Dark Mode based on system preference or user choice
+        const theme = localStorage.getItem('theme') || 'system';
+        const isDarkMode = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDarkMode);
 
-        /* Body Styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            background: linear-gradient(120deg, #e0f7fa, #b3e5fc);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('theme') || 'system';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            document.documentElement.classList.toggle('dark', newTheme === 'dark');
         }
-
-        /* Header Styling */
-        h1 {
-            font-size: 3rem;
-            color: #0077cc;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        /* Link Styling */
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            background-color: #0077cc;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            background-color: #005f99;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Footer Styling */
-        footer {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <h1>Welcome to Alex Lutz's Corner!</h1>
-    <p>I'm Alex, a DevOps and FinOps consultant, passionate about helping businesses optimize their cloud infrastructure and reduce costs.</p>
-    <p>Connect with me:</p>
-    <a href="https://github.com/alexinslc" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/alexinslc" target="_blank">LinkedIn</a>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Alex Lutz | Built with ❤️ on GitHub Pages</p>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex flex-col justify-center items-center p-5">
+    <h1 class="text-4xl font-bold mb-4">Hi,👋</h1>
+    <p class="text-lg mb-6 text-center">I'm Alex, a DevOps and FinOps consultant passionate about optimizing cloud infrastructure and reducing costs.</p>
+    <div class="space-x-4">
+        <a href="https://github.com/alexinslc" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">GitHub</a>
+        <a href="https://linkedin.com/in/alexinslc" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">LinkedIn</a>
+    </div>
+    <button onclick="toggleTheme()" class="mt-8 px-4 py-2 bg-gray-700 text-white rounded-lg shadow hover:bg-gray-600 transition">
+        Toggle Dark Mode
+    </button>
+    <footer class="mt-10 text-sm text-gray-500">
+        &copy; <span id="year"></span> Alex Lutz | Built with ❤️ on GitHub Pages
     </footer>
 
     <script>
-        // Dynamic Year for the Footer
-        document.getElementById("year").textContent = new Date().getFullYear();
+        // Dynamic Year for Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
-
