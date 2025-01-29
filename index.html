@@ -1,34 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Lutz</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script>
-        // Toggle Dark Mode based on system preference or user choice
-        const theme = localStorage.getItem('theme') || 'system';
-        const isDarkMode = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        document.documentElement.classList.toggle('dark', isDarkMode);
-
-        function toggleTheme() {
-            const currentTheme = localStorage.getItem('theme') || 'system';
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('theme', newTheme);
-            document.documentElement.classList.toggle('dark', newTheme === 'dark');
-        }
-    </script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex flex-col justify-center items-center p-5">
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col justify-center items-center p-5">
     <h1 class="text-4xl font-bold mb-4">Hi,👋</h1>
     <p class="text-lg mb-6 text-center">I'm Alex, a DevOps and FinOps consultant passionate about optimizing cloud infrastructure and reducing costs.</p>
     <div class="space-x-4">
         <a href="https://github.com/alexinslc" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">GitHub</a>
         <a href="https://linkedin.com/in/alexinslc" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">LinkedIn</a>
     </div>
-    <button onclick="toggleTheme()" class="mt-8 px-4 py-2 bg-gray-700 text-white rounded-lg shadow hover:bg-gray-600 transition">
-        Toggle Dark Mode
-    </button>
     <footer class="mt-10 text-sm text-gray-500">
         &copy; <span id="year"></span> Alex Lutz | Built with ❤️ on GitHub Pages
     </footer>
