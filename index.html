@@ -5,20 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Lutz</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col justify-center items-center p-5">
-    <h1 class="text-4xl font-bold mb-4">Hi, I'm Alex 👋 a technology professional, autodidact, optimist, and gamer.</h1>
-    <p class="text-lg mb-6 text-center">You can find me around the web here.</p>
-    <div class="space-x-4">
-        <a href="https://github.com/alexinslc" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">GitHub</a>
-        <a href="https://www.linkedin.com/in/alexlutz" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">LinkedIn</a>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 min-h-screen flex flex-col items-center p-5">
+    <div class="max-w-4xl w-full space-y-8">
+        <!-- Profile Section -->
+        <div class="text-center space-y-4 animate-float">
+            <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
+                    <span class="text-4xl">👨‍💻</span>
+                </div>
+            </div>
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Hi, I'm Alex 👋</h1>
+            <p class="text-xl text-gray-300">Technology professional, autodidact, optimist, and gamer</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-8">
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
+                <i class="fas fa-code text-2xl text-blue-400 mb-2"></i>
+                <p>Development</p>
+            </div>
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
+                <i class="fas fa-brain text-2xl text-purple-400 mb-2"></i>
+                <p>Problem Solving</p>
+            </div>
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
+                <i class="fas fa-users text-2xl text-blue-400 mb-2"></i>
+                <p>Team Player</p>
+            </div>
+            <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
+                <i class="fas fa-gamepad text-2xl text-purple-400 mb-2"></i>
+                <p>Gaming</p>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-4">
+            <a href="https://github.com/alexinslc" target="_blank" 
+               class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-lg hover:from-blue-700 hover:to-blue-800 transition transform hover:scale-105">
+                <i class="fab fa-github mr-2"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/alexlutz" target="_blank" 
+               class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-lg hover:from-blue-700 hover:to-blue-800 transition transform hover:scale-105">
+                <i class="fab fa-linkedin mr-2"></i>LinkedIn
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-10 text-sm text-gray-500 text-center">
+            &copy; <span id="year"></span> Alex Lutz | Built with ❤️ on GitHub Pages
+        </footer>
     </div>
-    <footer class="mt-10 text-sm text-gray-500">
-        &copy; <span id="year"></span> Alex Lutz | Built with ❤️ on GitHub Pages
-    </footer>
 
     <script>
-        // Dynamic Year for Footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
