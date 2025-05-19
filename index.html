@@ -7,6 +7,13 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --deep-blue: #003049;
+            --red: #D62828;
+            --orange: #F77F00;
+            --yellow: #FCBF49;
+            --tan: #EAE2B7;
+        }
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -17,36 +24,36 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-amber-900 via-orange-900 to-amber-900 text-amber-50 min-h-screen flex flex-col items-center p-5">
+<body class="min-h-screen flex flex-col items-center p-5" style="background: linear-gradient(135deg, #003049 60%, #EAE2B7 100%); color: #EAE2B7;">
     <div class="max-w-4xl w-full space-y-8">
         <!-- Profile Section -->
         <div class="text-center space-y-4 animate-float">
-            <div class="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-amber-500 to-orange-600 p-1">
-                <div class="w-full h-full rounded-full bg-amber-900 flex items-center justify-center">
+            <div class="w-40 h-40 mx-auto rounded-full" style="background: linear-gradient(90deg, #F77F00 0%, #FCBF49 100%); padding: 4px;">
+                <div class="w-full h-full rounded-full flex items-center justify-center" style="background: #003049;">
                     <span class="text-6xl">👨‍💻</span>
                 </div>
             </div>
-            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-orange-400">Hi, I'm Alex 👋</h1>
-            <p class="text-xl text-amber-100">Dad, tech professional, autodidact, optimist, and part-time gamer</p>
-            <p class="text-lg text-amber-200 max-w-2xl mx-auto">Entrepreneur at heart, I thrive on turning innovative ideas into reality. Always exploring new side projects and opportunities to create something meaningful.</p>
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #F77F00, #FCBF49); -webkit-background-clip: text; background-clip: text;">Hi, I'm Alex 👋</h1>
+            <p class="text-xl" style="color: #EAE2B7;">Dad, tech professional, autodidact, optimist, and part-time gamer</p>
+            <p class="text-lg max-w-2xl mx-auto" style="color: #FCBF49;">Entrepreneur at heart, I thrive on turning innovative ideas into reality. Always exploring new side projects and opportunities to create something meaningful.</p>
         </div>
 
         <!-- Skills Section -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-8">
-            <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
-                <i class="fas fa-code text-2xl text-amber-400 mb-2"></i>
+            <div class="rounded-lg p-4 text-center transform hover:scale-105 transition" style="background: #003049; color: #FCBF49;">
+                <i class="fas fa-code text-2xl mb-2" style="color: #F77F00;"></i>
                 <p>Development</p>
             </div>
-            <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
-                <i class="fas fa-lightbulb text-2xl text-orange-400 mb-2"></i>
+            <div class="rounded-lg p-4 text-center transform hover:scale-105 transition" style="background: #FCBF49; color: #003049;">
+                <i class="fas fa-lightbulb text-2xl mb-2" style="color: #D62828;"></i>
                 <p>Innovation</p>
             </div>
-            <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
-                <i class="fas fa-rocket text-2xl text-amber-400 mb-2"></i>
+            <div class="rounded-lg p-4 text-center transform hover:scale-105 transition" style="background: #F77F00; color: #003049;">
+                <i class="fas fa-rocket text-2xl mb-2" style="color: #EAE2B7;"></i>
                 <p>Entrepreneurship</p>
             </div>
-            <div class="bg-amber-900/50 backdrop-blur-sm rounded-lg p-4 text-center transform hover:scale-105 transition">
-                <i class="fas fa-gamepad text-2xl text-orange-400 mb-2"></i>
+            <div class="rounded-lg p-4 text-center transform hover:scale-105 transition" style="background: #D62828; color: #EAE2B7;">
+                <i class="fas fa-gamepad text-2xl mb-2" style="color: #FCBF49;"></i>
                 <p>Gaming</p>
             </div>
         </div>
@@ -54,17 +61,19 @@
         <!-- Social Links -->
         <div class="flex justify-center space-x-4">
             <a href="https://github.com/alexinslc" target="_blank" 
-               class="px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg shadow-lg hover:from-amber-700 hover:to-orange-700 transition transform hover:scale-105">
-                <i class="fab fa-github mr-2"></i>GitHub
+               class="px-6 py-3 rounded-lg shadow-lg transition transform hover:scale-105"
+               style="background: linear-gradient(90deg, #003049 60%, #F77F00 100%); color: #EAE2B7;">
+                <i class="fab fa-github mr-2" style="color: #FCBF49;"></i>GitHub
             </a>
             <a href="https://www.linkedin.com/in/alexlutz" target="_blank" 
-               class="px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg shadow-lg hover:from-amber-700 hover:to-orange-700 transition transform hover:scale-105">
-                <i class="fab fa-linkedin mr-2"></i>LinkedIn
+               class="px-6 py-3 rounded-lg shadow-lg transition transform hover:scale-105"
+               style="background: linear-gradient(90deg, #D62828 60%, #FCBF49 100%); color: #003049;">
+                <i class="fab fa-linkedin mr-2" style="color: #F77F00;"></i>LinkedIn
             </a>
         </div>
 
         <!-- Footer -->
-        <footer class="mt-10 text-sm text-amber-600 text-center">
+        <footer class="mt-10 text-sm text-center" style="color: #FCBF49;">
             &copy; <span id="year"></span> Alex Lutz | Built with ❤️ on GitHub Pages
         </footer>
     </div>
