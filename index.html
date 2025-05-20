@@ -25,6 +25,19 @@
         .tron-glow {
             box-shadow: 0 0 8px 1px var(--tron-cyan), 0 0 1px 0.5px var(--tron-cyan) inset;
         }
+        .skill-card {
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 12px 2px var(--tron-cyan), 0 0 2px 1px var(--tron-cyan) inset;
+        }
+        .social-link {
+            transition: all 0.3s ease;
+        }
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-8" style="background: var(--tron-bg); color: var(--tron-gray);">
@@ -39,21 +52,36 @@
             <p class="text-base max-w-2xl mx-auto font-semibold" style="color: var(--tron-cyan);">Entrepreneur at heart, I thrive on turning innovative ideas into reality. Always exploring new side projects and opportunities to create something meaningful.</p>
         </div>
 
+        <!-- About Section -->
+        <div class="max-w-2xl mx-auto text-center space-y-4 py-6">
+            <h2 class="text-2xl font-bold" style="color: var(--tron-cyan);">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div class="p-4 rounded-xl tron-glow" style="background: var(--tron-card);">
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--tron-orange);">Experience</h3>
+                    <p class="text-sm">5+ years in devops, finops, leadership and software development</p>
+                </div>
+                <div class="p-4 rounded-xl tron-glow" style="background: var(--tron-card);">
+                    <h3 class="text-lg font-semibold mb-2" style="color: var(--tron-orange);">Focus</h3>
+                    <p class="text-sm">Half-stack development, cloud architecture, and team leadership</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Skills Section -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 py-6">
-            <div class="rounded-xl p-6 text-center shadow-lg tron-glow" style="background: var(--tron-card); color: var(--tron-cyan);">
+            <div class="rounded-xl p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
                 <i class="fas fa-code text-3xl mb-3" style="color: var(--tron-orange);"></i>
                 <p class="text-lg font-bold mt-2">Development</p>
             </div>
-            <div class="rounded-xl p-6 text-center shadow-lg tron-glow" style="background: var(--tron-card); color: var(--tron-cyan);">
+            <div class="rounded-xl p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
                 <i class="fas fa-lightbulb text-3xl mb-3" style="color: var(--tron-orange);"></i>
                 <p class="text-lg font-bold mt-2">Innovation</p>
             </div>
-            <div class="rounded-xl p-6 text-center shadow-lg tron-glow" style="background: var(--tron-card); color: var(--tron-cyan);">
+            <div class="rounded-xl p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
                 <i class="fas fa-rocket text-3xl mb-3" style="color: var(--tron-orange);"></i>
                 <p class="text-lg font-bold mt-2">Entrepreneurship</p>
             </div>
-            <div class="rounded-xl p-6 text-center shadow-lg tron-glow" style="background: var(--tron-card); color: var(--tron-cyan);">
+            <div class="rounded-xl p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
                 <i class="fas fa-gamepad text-3xl mb-3" style="color: var(--tron-orange);"></i>
                 <p class="text-lg font-bold mt-2">Gaming</p>
             </div>
@@ -62,14 +90,19 @@
         <!-- Social Links -->
         <div class="flex justify-center space-x-6 mt-6">
             <a href="https://github.com/alexinslc" target="_blank" 
-               class="px-6 py-3 rounded-xl shadow-lg text-lg font-bold transition transform hover:scale-105 tron-glow"
+               class="px-6 py-3 rounded-xl shadow-lg text-lg font-bold transition transform hover:scale-105 tron-glow social-link"
                style="background: var(--tron-card); color: var(--tron-cyan); border: none;">
                 <i class="fab fa-github mr-2" style="color: var(--tron-orange);"></i>GitHub
             </a>
             <a href="https://www.linkedin.com/in/alexlutz" target="_blank" 
-               class="px-6 py-3 rounded-xl shadow-lg text-lg font-bold transition transform hover:scale-105 tron-glow"
+               class="px-6 py-3 rounded-xl shadow-lg text-lg font-bold transition transform hover:scale-105 tron-glow social-link"
                style="background: var(--tron-card); color: var(--tron-cyan); border: none;">
                 <i class="fab fa-linkedin mr-2" style="color: var(--tron-orange);"></i>LinkedIn
+            </a>
+            <a href="mailto:alex@alexlutz.com" 
+               class="px-6 py-3 rounded-xl shadow-lg text-lg font-bold transition transform hover:scale-105 tron-glow social-link"
+               style="background: var(--tron-card); color: var(--tron-cyan); border: none;">
+                <i class="fas fa-envelope mr-2" style="color: var(--tron-orange);"></i>Contact
             </a>
         </div>
 
