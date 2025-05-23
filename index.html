@@ -5,106 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Lutz</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --tron-bg: #0a0a0a;
-            --tron-cyan: #00fff7;
-            --tron-orange: #ff6600;
-            --tron-gray: #e0e0e0;
-            --tron-card: #181818;
+            --bg: #fafafa;
+            --text: #333333;
+            --text-light: #666666;
+            --border: #e0e0e0;
+            --card: #ffffff;
+            --accent: #555555;
         }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        .card {
+            border: 1px solid var(--border);
+            transition: opacity 0.2s ease;
         }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        .tron-glow {
-            box-shadow: 0 0 8px 1px var(--tron-cyan), 0 0 1px 0.5px var(--tron-cyan) inset;
-        }
-        .skill-card {
-            transition: all 0.3s ease;
-        }
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 12px 2px var(--tron-cyan), 0 0 2px 1px var(--tron-cyan) inset;
+        .card:hover {
+            opacity: 0.8;
         }
         .social-link {
-            transition: all 0.3s ease;
+            transition: opacity 0.2s ease;
         }
         .social-link:hover {
-            transform: translateY(-2px);
+            opacity: 0.7;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center p-4 sm:p-8" style="background: var(--tron-bg); color: var(--tron-gray);">
-    <div class="max-w-4xl w-full space-y-6 sm:space-y-10">
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8" style="background: var(--bg); color: var(--text);">
+    <div class="max-w-4xl w-full space-y-8 sm:space-y-12 py-10 sm:py-16">
         <!-- Profile Section -->
-        <div class="text-center space-y-4 sm:space-y-5 animate-float">
-            <div class="w-24 h-24 sm:w-36 sm:h-36 mx-auto rounded-full border-4 tron-glow" style="border-color: var(--tron-cyan); background: var(--tron-card); display: flex; align-items: center; justify-content: center;">
-                <span class="text-[3rem] sm:text-[5rem]">👨‍💻</span>
+        <div class="text-center space-y-6 sm:space-y-8">
+            <div class="w-16 h-16 sm:w-24 sm:h-24 mx-auto rounded-full border" style="border-color: var(--border); background: var(--card); display: flex; align-items: center; justify-content: center;">
+                <span class="text-2xl sm:text-3xl">👨‍💻</span>
             </div>
-            <h1 class="text-3xl sm:text-4xl font-extrabold" style="color: var(--tron-cyan); text-shadow: 0 0 8px #00fff7;">Hi, I'm Alex <span class="align-middle">👋</span></h1>
-            <p class="text-base sm:text-lg font-medium" style="color: var(--tron-gray);">Dad, tech professional, autodidact, and optimist</p>
-            <p class="text-sm sm:text-base max-w-2xl mx-auto font-semibold px-4" style="color: var(--tron-cyan);">Entrepreneur at heart, I thrive on turning innovative ideas into reality. Always exploring new side projects and opportunities to create something meaningful.</p>
+            <h1 class="text-3xl sm:text-4xl font-light" style="color: var(--text);">Hi, I'm Alex</h1>
+            <p class="text-base sm:text-lg" style="color: var(--text-light);">Dad, DevOps leader, optimist</p>
+            <p class="text-sm sm:text-base max-w-xl mx-auto px-4" style="color: var(--text);">Building reliable systems and leading teams that ship great things.</p>
         </div>
 
         <!-- About Section -->
-        <div class="max-w-2xl mx-auto text-center space-y-2 py-2 sm:py-4">
-            <h2 class="text-lg sm:text-xl font-bold" style="color: var(--tron-cyan);">About Me</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-left">
-                <div class="p-3 rounded-xl tron-glow" style="background: var(--tron-card);">
-                    <h3 class="text-sm sm:text-base font-semibold mb-1" style="color: var(--tron-orange);">Experience</h3>
-                    <p class="text-xs sm:text-sm">5+ years in devops, finops, leadership and software development</p>
-                </div>
-                <div class="p-3 rounded-xl tron-glow" style="background: var(--tron-card);">
-                    <h3 class="text-sm sm:text-base font-semibold mb-1" style="color: var(--tron-orange);">Focus</h3>
-                    <p class="text-xs sm:text-sm">Half-stack development, cloud architecture, and team leadership</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 py-4 sm:py-6">
-            <div class="rounded-xl p-4 sm:p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
-                <i class="fas fa-code text-2xl sm:text-3xl mb-2 sm:mb-3" style="color: var(--tron-orange);"></i>
-                <p class="text-base sm:text-lg font-bold mt-2">Development</p>
-            </div>
-            <div class="rounded-xl p-4 sm:p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
-                <i class="fas fa-brain text-2xl sm:text-3xl mb-2 sm:mb-3" style="color: var(--tron-orange);"></i>
-                <p class="text-base sm:text-lg font-bold mt-2">Thinker</p>
-            </div>
-            <div class="rounded-xl p-4 sm:p-6 text-center shadow-lg tron-glow skill-card" style="background: var(--tron-card); color: var(--tron-cyan);">
-                <i class="fas fa-rocket text-2xl sm:text-3xl mb-2 sm:mb-3" style="color: var(--tron-orange);"></i>
-                <p class="text-base sm:text-lg font-bold mt-2">Entrepreneurship</p>
+        <div class="max-w-2xl mx-auto text-center space-y-4 py-4 sm:py-8">
+            <div class="text-center">
+                <p class="text-sm" style="color: var(--text-light);">DevOps • FinOps • Leadership • Cloud Architecture</p>
             </div>
         </div>
 
         <!-- Social Links -->
-        <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-6 mt-4 sm:mt-6">
+        <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-6 mt-6 sm:mt-10">
             <a href="https://github.com/alexinslc" target="_blank" 
-               class="px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg text-base sm:text-lg font-bold transition transform hover:scale-105 tron-glow social-link"
-               style="background: var(--tron-card); color: var(--tron-cyan); border: none;">
-                <i class="fab fa-github mr-2" style="color: var(--tron-orange);"></i>GitHub
+               class="px-6 py-3 rounded-lg text-base font-medium social-link"
+               style="background: var(--card); color: var(--text); border: 1px solid var(--border); text-decoration: none;">
+                GitHub
             </a>
             <a href="https://www.linkedin.com/in/alexlutz" target="_blank" 
-               class="px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg text-base sm:text-lg font-bold transition transform hover:scale-105 tron-glow social-link"
-               style="background: var(--tron-card); color: var(--tron-cyan); border: none;">
-                <i class="fab fa-linkedin mr-2" style="color: var(--tron-orange);"></i>LinkedIn
+               class="px-6 py-3 rounded-lg text-base font-medium social-link"
+               style="background: var(--card); color: var(--text); border: 1px solid var(--border); text-decoration: none;">
+                LinkedIn
             </a>
             <a href="mailto:alexinslc@gmail.com" 
-               class="px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg text-base sm:text-lg font-bold transition transform hover:scale-105 tron-glow social-link"
-               style="background: var(--tron-card); color: var(--tron-cyan); border: none;">
-                <i class="fas fa-envelope mr-2" style="color: var(--tron-orange);"></i>Contact
+               class="px-6 py-3 rounded-lg text-base font-medium social-link"
+               style="background: var(--card); color: var(--text); border: 1px solid var(--border); text-decoration: none;">
+                Contact
             </a>
         </div>
 
         <!-- Footer -->
-        <footer class="mt-8 sm:mt-12 text-sm sm:text-base text-center font-medium" style="color: var(--tron-cyan);">
-            &copy; <span id="year"></span> Alex Lutz | Built with <span style="color: var(--tron-orange);">❤️</span> on GitHub Pages
+        <footer class="mt-12 sm:mt-16 text-sm text-center" style="color: var(--text-light);">
+            &copy; <span id="year"></span> Alex Lutz
         </footer>
     </div>
 
